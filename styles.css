@@ -96,7 +96,7 @@ body {
 
 .btn_proceed button {
     border: 0;
-    outline: 0;
+    outline: none;
     background-color: hsl(245, 75%, 52%);
     width: 100%;
     color: #fff;
@@ -108,11 +108,12 @@ body {
 }
 
 .btn_cancel button {
-    outline: 0;
+    outline: none;
     border: 0;
     width: 100%;
     margin-bottom: 0.5rem;
     cursor: pointer;
+    background-color:#fff ;
 }
 
 .btn_cancel button p {
