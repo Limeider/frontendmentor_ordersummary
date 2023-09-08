@@ -1,126 +1,140 @@
 * {
-    margin: 0;
+    box-sizing: border-box;
+    margin:0;
     padding: 0;
-    font-family: 'Red Hat Display', sans-serif;
+
 }
 
 body {
-    background-color: hsl(225, 100%, 94%);
+    background-color:hsl(30, 38%, 92%);
 }
 
-.main_container {
-    width: 100%;
+.attribution {
+    text-align: center;
+    position: relative;
+    bottom: 30px;
+}
+
+.container {
+    font-family: "Fraunces", serif;
     min-height: 100vh;
     display: flex;
-    align-items: center;
     justify-content: center;
-    flex-direction: column;
+    align-items: center;
 }
 
-.content_container {
+.card {
+    border-radius: 10px;
     display: flex;
-    flex-direction: column;
-    margin: 3rem 2rem;
-    background-color: white;
-    max-width: 400px;
-    text-align: center;
-    border-radius: 20px;
-    margin-bottom: 10rem;
+    max-width: 666px;
+    background-color: #fff;
+    margin: 0 1rem;
+}
+
+.image_container {
+    width: 50%;
 }
 
 .image_container img {
     height: 100%;
     width: 100%;
-    border-top-left-radius: 20px;
-    border-top-right-radius: 20px;
-    object-fit:cover;
+    border-top-left-radius: 10px;
+    border-bottom-left-radius: 10px;
+    object-fit: cover;
 }
 
-.bg_container img {
-    width: 100vw;
-    height: 50%;
-    background-size: cover;
-    background-position: center;
-    position: fixed; /* To remove it from the flow of the html document and make it act as if it isnt there */
-    z-index: -1;
+.details_container {
+    width: 50%;
+    padding: 30px;
 }
 
-.product_info {
-    margin: 2rem 3rem 3rem 3rem;
+.details_container .name {
+    color: hsl(212, 21%, 14%);
+    padding-right: 2rem;
+    margin-bottom: 1.75rem;
 }
 
-.description_container h2 {
-    font-weight: 900;
-    margin-bottom: 1rem;
-    color: hsl(223, 47%, 23%);
-}
-
-.description_container p {
-    font-weight: 500;
+.details_container .description {
+    color: hsl(228, 12%, 48%);
+    font-family: "Montserrat";
     font-size: 14px;
-    color: hsl(224, 23%, 55%);
-    margin-bottom: 2rem;
+    margin-bottom: 1.75rem;
+    line-height: 25px;
 }
 
-.price_container {
+.details_container .montserrat {
+    color: hsl(228, 12%, 48%);
+    font-family: "Montserrat";
+    font-size: 14px;
+    margin-bottom: 1.75rem;
+    letter-spacing: 4px;
+}
+
+.details_container .price_container {
     display: flex;
+    gap: 1rem;
     align-items: center;
-    justify-content: space-between;
-    position: relative;
-    margin-bottom: 3rem;
-
+    margin-bottom: 1.75rem;
 }
 
-.annual_plan {
-    position: absolute;
-    left:70px;
+.price_container .current_price {
+    color: hsl(158, 36%, 37%);
 }
 
-.annual_plan h4 {
-    font-weight: 900;
-    color: hsl(223, 47%, 23%);
-}
-
-.annual_plan p {
-    font-weight: 500;
+.price_container .old_price {
+    color: hsl(228, 12%, 48%);
     font-size: 14px;
-    color:hsl(224, 23%, 55%);
+    text-decoration: line-through;
+    font-family: "Montserrat";
 }
 
-.price_container h5 {
-    color:hsl(245, 75%, 52%);
-    text-decoration: underline;
-    font-weight: 900;
-}
-
-.btn_proceed button {
+.details_container .btn {
+    width: 100%;
     border: 0;
     outline: 0;
-    background-color: hsl(245, 75%, 52%);
-    width: 100%;
-    color: #fff;
-    border-radius: 7px;
-    padding: 10px 0;
-    margin-bottom: 2rem;
+    background-color: hsl(158, 36%, 37%);
+    font-family: "Montserrat";
+    color:#fff;
+    display: flex;
+    gap: 1rem;
+    align-items: center;
+    justify-content: center;
+    padding: 1rem 0;
+    border-radius: 10px;
+}
+
+.details_container .btn:hover {
+    background-color: hsl(212, 21%, 14%);
     cursor: pointer;
-    box-shadow: 5px 5px 25px hsl(224, 23%, 55%);
 }
 
-.btn_cancel button {
-    outline: 0;
-    border: 0;
-    width: 100%;
-    color: hsl(224, 23%, 55%);
-    font-weight: 700;
-    margin-bottom: 0.5rem;
-}
+@media only screen and (max-width:550px) {
 
-.attribution {
-    font-size: 13px;
-    text-align: center;
-}
+    .card {
+        flex-direction: column;
+        margin-top: 1rem;
+        margin-bottom: 1rem;
+    }
 
-.attribution a {
-    color: hsl(228, 45%, 44%);
+    .image_container img {
+        content: url(images/image-product-mobile.jpg);
+    }
+
+    .image_container {
+        width: 100%;
+        height: 40%;
+    }
+
+    .details_container {
+        width: 100%;
+    }
+
+    .details_container .name {
+        padding-right: 0;
+    }
+
+    .image_container img {
+        border-radius: 10px 10px 0 0;
+    }
+
 }
-    
