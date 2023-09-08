@@ -107,18 +107,12 @@ body {
     box-shadow: 5px 5px 25px hsl(224, 23%, 55%);
 }
 
-.btn_cancel button {
-    outline: none;
-    border: 0;
-    width: 100%;
-    margin-bottom: 0.5rem;
-    cursor: pointer;
-    background-color:#fff ;
-}
 
-.btn_cancel button p {
+.btn_cancel p {
     color: hsl(224, 23%, 55%);
     font-weight: 700;
+    margin-bottom: 0.5rem;
+    cursor: pointer;
 }
 
 .attribution {
@@ -140,7 +134,7 @@ body {
     background-color: hsl(255, 100%, 66%, 1);
 }
 
-.btn_cancel button p:hover {
+.btn_cancel p:hover {
     font-weight: 900 ;
     color:hsl(223, 47%, 23%);
 }
